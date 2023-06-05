@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <h1>Check It!</h1>
+    <h1>Checky the Chicken</h1>
 
     <div class="wrapper">
       <nav>

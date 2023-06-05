@@ -11,15 +11,26 @@ export const useChecklistStore = defineStore('checklists', () => {
       checklistId: newId,
       checklistName: ''
     }
-    console.log('checklists:', checklists.value)
   }
 
   function editChecklistName(checklistId, newName) {
     checklists.value[checklistId].checklistName = newName
-    console.log('checklists:', checklists.value)
+  }
+
+  function addChecklistItem(checklistId, newItemName) {
+    const checklist = checklists.value[checklistId]
+    const newId = uuidv4()
+    if (!checklist.items) {
+      checklist.items = {}
+    }
+    checklist.items[newId] = {
+      itemId: newId,
+      itemName: newItemName
+    }
   }
 
   return {
+    addChecklistItem,
     addNewChecklist,
     checklists,
     editChecklistName

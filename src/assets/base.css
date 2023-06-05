@@ -70,4 +70,17 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightblue;
+}
+
+button {
+	background-color: rgb(109, 109, 204);
+	color: white;
+	border: none;
+  border-radius: 5px;
+	padding: 5px 10px;
+  margin: 5px 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
